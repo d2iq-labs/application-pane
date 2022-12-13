@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: single-pane
+spec:
+  selector:
+    app: single-pane
+  ports:
+  - port: 80
+    name: http
+    targetPort: 3000

@@ -2,6 +2,7 @@ import React from "react";
 import { NextPageContext } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import {
   AppChrome,
   Container,
@@ -25,6 +26,8 @@ interface DeploymentProps {
 }
 
 export default function Deployment({ namespace, deployment }: DeploymentProps) {
+  const { basePath } = useRouter();
+
   const dashboards = [
     {
       title: "Kubernetes Dashboard",
@@ -82,9 +85,14 @@ export default function Deployment({ namespace, deployment }: DeploymentProps) {
             <GridList columnCount={3}>
               {dashboards.map(({ title, icon, path }) => {
                 return (
-                  <LinkCard key={title} linkDescription={title} url={path}>
+                  <LinkCard key={path} linkDescription={title} url={path}>
                     <Flex align="center" gutterSize="s">
-                      <Image src={icon} alt={title} width={32} height={32} />
+                      <Image
+                        src={`${basePath}/${icon}`}
+                        alt={title}
+                        width={32}
+                        height={32}
+                      />
                       <HeadingText2>{title}</HeadingText2>
                     </Flex>
                   </LinkCard>
