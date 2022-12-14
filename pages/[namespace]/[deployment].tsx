@@ -59,7 +59,7 @@ export default function Deployment({ namespace, deployment }: DeploymentProps) {
           name="description"
           content="A single space to view your application"
         />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href={`${basePath}/favicon.png`} />
       </Head>
       <AppChrome headerBar={<Header />}>
         <Container>
