@@ -1,0 +1,19 @@
+apiVersion: apps.kommander.d2iq.io/v1alpha3
+kind: App
+metadata:
+  annotations:
+    apps.kommander.d2iq.io/allow-multiple-instances: "true"
+    apps.kommander.d2iq.io/category: monitoring
+    apps.kommander.d2iq.io/description: 'A dashboard for observing the health of a single application or service deployed via DKP'
+    apps.kommander.d2iq.io/display-name: Developer Single Pane
+    apps.kommander.d2iq.io/icon: iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAA9ZJREFUeJzt3c1qXGUAxvGnGrAgtmprWxBaEQRBqyAqCKILl3ZRXPix8BIELyGX1EUuQMFL0JWCH7XiZxGKUKtWF0PR0vjMJDPJO2fy+8G7O4unnPybyRySSQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgwx0bPWDFtpJcTHJy9JB9eCDJk0n+TvJlkt/HztmXX5N8muTP0UO413tJvsvsC8wZd64leXvOveKQvZ/xXxjO3efdescmYhNeYh1P8m2SU6OHcJcfkpxPcmv0kGXcN3rACrwccayjs0leGD1iWZsQyKOjB/C/To8esKxNCAQOjECgEAgUW6MHHJJfMnuAtW6eSHJhzjVfJ/nqwJfs3cX4+W8SLmf+e/JXhq3rtjN/+/agbfPsZP72S8PWrYiXWFAIBAqBQCEQKAQChUCgEAgUAoFCIFAIBAqBQCEQKAQChUCgEAgUAoFCIFAIBAqBQCEQKAQChUCgEAgUAoFCIFAIBAqBQCEQKAQChUCgEAgUAoFCIFAIBAqBQCEQKAQChUCgEAgUW6MHHJITSZ4dPWIXZxa8Zh23PzR6AIu5nPkfaO+MOZfKfZsEL7GgEAgUAoFCIFAIBAqBQCEQKI7Kg8IbSb4ZPWIXZ5I8Nuean5L8eAhb9up8PCychEUeFF4Ztq7bzvzt24O2zbMTDwrhaBMIFAKBQiBQCAQKgUAhECgEAoVAoBAIFAKBQiBQCAQKgUAhECgEAoVAoBAIFAKBQiBQCAQKgUAhECgEAoVAoBAIFAKBQiBQCAQKgUAhECgEAoVAoBAIFAKBQiBQCAQKgUAhECi2Rg9YwoOZfZD9wwtcezLJcwc7Z1/OLnjNOm4/scA1jyQ5l+RGkt8Odg53vJLkk8z/EHtnfc7tJB8neWmX+8kKvZHkVsbfcGd/52aS1+65q2vs2OgBe7CV5IskF0YPYSmfJ3k6s+8qa29KP6S/GHFsgqeSPD96xKKmFMi50QNYmcdHD1jUlAKBQycQKAQCxZQfFO7mr8zeTpxi+Mfy77uKd94WnZrbmf0b7h89ZFU2LZCdJJdHjzjidpK8OXrEqkzxf1o4NAKBQiBQCAQKgUCxae9ivZrko9EjjriLowes0qYFcirJ66NHsDm8xIJCIFAIBIopBXJ99ABW5ufRAxY1pV+5PZ7kapLTo4ewlO+TnE/yx+ghi5jSd5CbST4cPYKlfZCJxDFV7yS5lvF/ocPZ27ma5K1d7udam9JLrP/aSvJMZn+YjPV3Pclnmf2+DgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwTv4BDj7bUMFJdywAAAAASUVORK5CYII=
+    apps.kommander.d2iq.io/overview: A dashboard for observing the health of a single application or service deployed via DKP
+    apps.kommander.d2iq.io/scope: project
+    apps.kommander.d2iq.io/type: custom
+  name: single-pane
+spec:
+  appId: single-pane
+  gitRepositoryRef:
+    kind: GitRepository
+    name: single-pane
+  version: 0.0.1
