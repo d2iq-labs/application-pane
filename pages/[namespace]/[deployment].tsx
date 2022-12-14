@@ -42,7 +42,7 @@ export default function Deployment({ namespace, deployment }: DeploymentProps) {
     {
       title: "Grafana Logging",
       icon: "/grafanaLogo.svg",
-      path: `/dkp/logging/grafana/d/fRIvzUZMz/logging-dashboard-via-loki?orgId=1&refresh=5s&var-datasource=Loki&var-container=prometheus-adapter&var-pod=All&var-stream=All&var-searchable_pattern=`,
+      path: `/dkp/logging/grafana/d/fRIvzUZMz/logging-dashboard-via-loki?orgId=1&refresh=5s&var-datasource=Loki&var-container=${deployment}-svc&var-pod=All&var-stream=All&var-searchable_pattern=`,
     },
   ];
 
